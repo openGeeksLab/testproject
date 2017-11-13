@@ -1,0 +1,4 @@
+// profile
+export const GET_USER_PROFILE = 'GET_USER_PROFILE';
+export const GET_SLIDER_IMAGES = 'GET_SLIDER_IMAGES';
+export const GET_GRID_IMAGES = 'GET_GRID_IMAGES';
