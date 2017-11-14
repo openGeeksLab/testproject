@@ -9,12 +9,14 @@ import {
 import AboutUser from '../containers/AboutUser';
 import Slide from '../containers/Slider';
 import Grid from '../containers/Grid';
+import ModalAnimated from '../components/ModalAnimated';
 
 
 class ProfileScreen extends React.Component {
 	render() {
 		return (
 			<ScrollView style={styles.mainView}>
+        <ModalAnimated />
         <View style={{ flex: 1 }}>
           <AboutUser />
         </View>

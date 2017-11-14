@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 
 import { width, height } from 'react-native-dimension';
-import ImageSlider from 'react-native-image-slider';
+import ImageSlider from './ImageSlider';
 
 const Slider = ({
   position,
