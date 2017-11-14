@@ -12,14 +12,6 @@ import {
     Dimensions
 } from 'react-native';
 
-// const reactNativePackage = require('react-native/package.json');
-// const splitVersion = reactNativePackage.version.split('.');
-// const majorVersion = +splitVersion[0]; //0
-// const minorVersion = +splitVersion[1]; //49
-
-const majorVersion = 0;
-const minorVersion = 49;
-
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
@@ -69,11 +61,7 @@ export default class ImageSlider extends Component {
     _move(index) {
         const isUpdating = index !== this._getPosition();
         const x = this.state.width * index;
-        if (majorVersion === 0 && minorVersion <= 19) {
-            this._ref.scrollTo(0, x, true); // use old syntax
-        } else {
-            this._ref.scrollTo({x: this.state.width * index, y: 0, animated: true});
-        }
+        this._ref.scrollTo({x: this.state.width * index, y: 0, animated: true});
         this.setState({position: index});
         if (isUpdating && this.props.onPositionChanged) {
             this.props.onPositionChanged(index);
